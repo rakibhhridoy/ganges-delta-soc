@@ -1,0 +1,7 @@
+pathway,land_use,mean_SOC_2050,pct_change_vs_baseline
+RCP4.5,BAU,42.44,-5.86
+RCP4.5,10pct_mangrove,47.14,4.55
+RCP4.5,50pct_mangrove,57.06,26.56
+RCP8.5,BAU,39.85,-11.62
+RCP8.5,10pct_mangrove,44.37,-1.59
+RCP8.5,50pct_mangrove,53.93,19.61

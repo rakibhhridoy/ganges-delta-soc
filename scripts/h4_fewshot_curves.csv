@@ -1,0 +1,76 @@
+delta,n_local,R2,ceiling_within_R2
+Mississippi,0,-3.045,-0.244
+Mississippi,5,-2.902,-0.244
+Mississippi,10,-2.796,-0.244
+Mississippi,15,-2.646,-0.244
+Mississippi,20,-2.468,-0.244
+Rhine-Meuse,0,-1.42,0.185
+Rhine-Meuse,5,-1.287,0.185
+Rhine-Meuse,10,-1.263,0.185
+Rhine-Meuse,15,-1.144,0.185
+Rhine-Meuse,20,-1.176,0.185
+Niger,0,-1.767,0.251
+Niger,5,-1.724,0.251
+Niger,10,-1.726,0.251
+Niger,15,-1.756,0.251
+Niger,20,-1.802,0.251
+Yellow River,0,-8.719,-0.226
+Yellow River,5,-8.696,-0.226
+Yellow River,10,-8.743,-0.226
+Yellow River,15,-8.534,-0.226
+Yellow River,20,-8.081,-0.226
+Limpopo,0,-0.126,0.368
+Limpopo,5,-0.169,0.368
+Limpopo,10,-0.141,0.368
+Limpopo,15,-0.142,0.368
+Limpopo,20,-0.112,0.368
+Chao Phraya,0,-98.199,0.1
+Chao Phraya,5,-75.508,0.1
+Chao Phraya,10,-69.407,0.1
+Chao Phraya,15,-53.519,0.1
+Chao Phraya,20,-36.471,0.1
+Parana-Plata,0,-0.093,0.62
+Parana-Plata,5,-0.128,0.62
+Parana-Plata,10,-0.11,0.62
+Parana-Plata,15,-0.107,0.62
+Parana-Plata,20,-0.125,0.62
+Sacramento,0,0.138,0.839
+Sacramento,5,0.139,0.839
+Sacramento,10,0.144,0.839
+Sacramento,15,0.142,0.839
+Sacramento,20,0.144,0.839
+Indus,0,-12.907,0.732
+Indus,5,-14.561,0.732
+Indus,10,-14.497,0.732
+Indus,15,-14.057,0.732
+Indus,20,-13.382,0.732
+Mackenzie,0,0.053,-0.099
+Mackenzie,5,0.059,-0.099
+Mackenzie,10,0.044,-0.099
+Mackenzie,15,0.071,-0.099
+Mackenzie,20,-0.025,-0.099
+Danube,0,0.054,0.788
+Danube,5,0.063,0.788
+Danube,10,0.099,0.788
+Danube,15,0.106,0.788
+Danube,20,0.094,0.788
+Amazon,0,-11.455,-0.316
+Amazon,5,-11.238,-0.316
+Amazon,10,-10.32,-0.316
+Amazon,15,-12.534,-0.316
+Amazon,20,-12.967,-0.316
+Senegal,0,-29.743,0.994
+Senegal,5,-30.442,0.994
+Senegal,10,-30.382,0.994
+Senegal,15,-31.221,0.994
+Senegal,20,-33.709,0.994
+Pearl,0,-17.005,0.565
+Pearl,5,-12.582,0.565
+Pearl,10,-11.545,0.565
+Pearl,15,-10.096,0.565
+Pearl,20,-5.271,0.565
+Ganges,0,-0.245,0.043
+Ganges,5,-0.173,0.043
+Ganges,10,-0.16,0.043
+Ganges,15,-0.141,0.043
+Ganges,20,-0.096,0.043

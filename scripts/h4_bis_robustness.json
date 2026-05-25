@@ -1,0 +1,20 @@
+{
+  "locked": {
+    "tag": "locked",
+    "rhine_meuse_n": 504,
+    "rhine_meuse_within_R2": 0.145,
+    "within_delta_median_R2": 0.251,
+    "cross_delta_median_R2": -0.551,
+    "cross_delta_frac_positive": 0.057,
+    "cross_delta_n_pairs": 210
+  },
+  "bis_augmented": {
+    "tag": "bis_augmented",
+    "rhine_meuse_n": 2652,
+    "rhine_meuse_within_R2": 0.185,
+    "within_delta_median_R2": 0.251,
+    "cross_delta_median_R2": -0.551,
+    "cross_delta_frac_positive": 0.062,
+    "cross_delta_n_pairs": 210
+  }
+}

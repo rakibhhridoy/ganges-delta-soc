@@ -1,0 +1,15 @@
+delta,top_feature,matches_ganges_top,kendall_tau_vs_ganges,p
+Mississippi,clay,False,0.667,0.333
+Rhine-Meuse,ph,True,0.333,0.75
+Niger,clay,False,0.333,0.75
+Yellow River,clay,False,0.333,0.75
+Limpopo,ph,True,0.667,0.333
+Chao Phraya,ph,True,0.667,0.333
+Parana-Plata,ph,True,0.333,0.75
+Sacramento,ph,True,0.0,1.0
+Indus,ph,True,0.667,0.333
+Mackenzie,clay,False,0.0,1.0
+Danube,clay,False,0.667,0.333
+Amazon,silt,False,0.333,0.75
+Senegal,silt,False,0.0,1.0
+Pearl,silt,False,0.333,0.75

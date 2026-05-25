@@ -1,0 +1,39 @@
+G-RothC v2 (corrected first-order) — results
+================================================
+n samples            : 100
+baseline mean SOC    : 45.08 t C ha^-1
+baseline decay D0    : 0.0546 yr^-1   (mean residence ~18.3 yr)
+calibrated C_in flux : mean 1.89 (range 0.08-8.86) t C ha^-1 yr^-1
+
+2050 mean SOC by scenario (t C ha^-1):
+  RCP4.5  BAU              :   42.44  (-5.86% vs baseline)
+  RCP4.5  10pct_mangrove   :   47.14  (+4.55% vs baseline)
+  RCP4.5  50pct_mangrove   :   57.06  (+26.56% vs baseline)
+  RCP8.5  BAU              :   39.85  (-11.62% vs baseline)
+  RCP8.5  10pct_mangrove   :   44.37  (-1.59% vs baseline)
+  RCP8.5  50pct_mangrove   :   53.93  (+19.61% vs baseline)
+
+Management effect (50% mangrove vs BAU, RCP4.5) : +14.62 t C ha^-1
+Climate effect    (RCP4.5 vs RCP8.5, BAU)       : +2.60 t C ha^-1
+Management : Climate ratio                       : 5.63x
+
+Change rate by salinity class under RCP4.5 BAU (t C ha^-1 yr^-1):
+  Brackish   : -0.122
+  Freshwater : -0.019
+
+Sensitivity (RCP4.5 BAU 2050 mean SOC):
+  k0  (0.01-0.05) span : 3.9% of mean
+  Q10 (1.5-3.5)  span : 6.2% of mean
+  -> dominant driver  : Q10
+
+100-member ensemble 90% PI (RCP4.5 BAU 2050 mean SOC): 41.8-44.2 t C ha^-1
+Management signal positive in 100/100 ensemble members
+
+Multi-delta management:climate ratio (H4.5; per-delta IPCC AR6 forcing):
+  Ganges       : 6.55x
+  Mississippi  : 5.27x
+  Mekong       : 7.20x
+  Rhine-Meuse  : 4.71x
+  Yellow River : 4.65x
+  range across 5 deltas : 4.6-7.2x
+  (stock-independence check: S0=50 vs S0=150 identical = True)

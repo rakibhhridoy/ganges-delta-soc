@@ -1,0 +1,23 @@
+# --- large data file (Zenodo only; exceeds GitHub 100 MB hard limit) ---
+data/gis/DEM.tif
+
+# --- macOS junk ---
+.DS_Store
+._*
+
+# --- python ---
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# --- virtual environments (if a contributor creates one in the bundle) ---
+venv/
+.venv/
+env/
+.env/
+
+# --- editor / IDE ---
+.idea/
+.vscode/
+*.swp

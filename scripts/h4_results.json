@@ -1,0 +1,80 @@
+{
+  "source": "Harmonised WoSIS profiles (Batjes 2024)",
+  "predictors": [
+    "ph",
+    "clay",
+    "silt",
+    "sand"
+  ],
+  "n_deltas_external": 14,
+  "n_total_external": 6652,
+  "sample_counts": {
+    "Amazon": 62,
+    "Chao Phraya": 204,
+    "Danube": 68,
+    "Indus": 167,
+    "Limpopo": 268,
+    "Mackenzie": 77,
+    "Mississippi": 2043,
+    "Niger": 327,
+    "Parana-Plata": 179,
+    "Pearl": 55,
+    "Rhine-Meuse": 2652,
+    "Sacramento": 178,
+    "Senegal": 57,
+    "Yellow River": 315,
+    "Ganges": 100
+  },
+  "within_delta_median_R2": 0.251,
+  "within_delta_range": [
+    -0.32,
+    0.99
+  ],
+  "cross_delta_median_R2": -0.551,
+  "cross_delta_frac_positive": 0.062,
+  "cross_delta_n_pairs": 210,
+  "forward_ganges_to_delta": {
+    "Amazon": -3.077,
+    "Chao Phraya": -0.719,
+    "Danube": -0.043,
+    "Indus": -60.063,
+    "Limpopo": -0.004,
+    "Mackenzie": -0.216,
+    "Mississippi": -0.366,
+    "Niger": -0.389,
+    "Parana-Plata": -0.425,
+    "Pearl": -0.666,
+    "Rhine-Meuse": -0.156,
+    "Sacramento": -0.085,
+    "Senegal": -12.753,
+    "Yellow River": -9.097
+  },
+  "reverse_pooled_to_ganges": {
+    "train_n": 6652,
+    "R2": -0.245,
+    "r": -0.061
+  },
+  "reverse_few_shot": {
+    "0": -0.245,
+    "5": -0.181,
+    "10": -0.133,
+    "15": -0.129,
+    "20": -0.113
+  },
+  "lodo": {
+    "Amazon": -12.825,
+    "Chao Phraya": -119.863,
+    "Danube": 0.05,
+    "Indus": -7.796,
+    "Limpopo": -0.158,
+    "Mackenzie": 0.036,
+    "Mississippi": -2.954,
+    "Niger": -1.87,
+    "Parana-Plata": -0.115,
+    "Pearl": -15.048,
+    "Rhine-Meuse": -1.305,
+    "Sacramento": 0.133,
+    "Senegal": -31.906,
+    "Yellow River": -7.982
+  }
+}

@@ -1,0 +1,9 @@
+model,cv_scheme,R2,RMSE,n_folds_or_groups
+GBR (79 feat),random 5-fold (leaky),0.907,19.0,5
+GBR (79 feat),location-grouped 5-fold,0.694,34.5,5
+GBR (79 feat),Leave-Location-Out (LOLO),0.844,24.6,20
+GBR (79 feat),Leave-Zone-Out (LZO),-0.382,73.3,4
+EC-only OLS,random 5-fold (leaky),0.385,48.9,5
+EC-only OLS,location-grouped 5-fold,0.423,47.4,5
+Full OLS,random 5-fold (leaky),0.343,50.6,5
+Full OLS,location-grouped 5-fold,-36.494,382.0,5

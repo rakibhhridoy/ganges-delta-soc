@@ -1,0 +1,11 @@
+# Python environment for reproducing all analyses and figures.
+# Tested with Python 3.11. Pin versions for exact reproducibility.
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.8.0
+scipy==1.16.2
+matplotlib==3.10.9
+seaborn==0.13.2
+geopandas==1.1.2      # Fig 1 only (study-area map)
+rasterio==1.4.4       # Fig 1 only (DEM raster)
+pyarrow              # only for the optional WoSIS extraction provenance script
