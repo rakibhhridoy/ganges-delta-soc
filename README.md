@@ -1,4 +1,4 @@
-# Reproducibility bundle
+# Ganges Delta SOC — code and data
 
 Code and data for *"Geochemistry-informed prediction and layered transferability of
 soil organic carbon in the Ganges Delta"* (Hasan et al., submitted to **Science of the Total Environment**).
@@ -65,5 +65,5 @@ Both run top-to-bottom in ≈1 min; Fig 1 is skipped automatically if `data/gis/
 ## Notes
 - **Fig 2** (geochemistry correlations) has no generator script in this release; it was produced in an earlier analysis stage and is provided as a static image in the manuscript.
 - `provenance/wosis_extraction.py` documents how `data/h4_delta_samples.csv` was extracted from the raw WoSIS 2023 snapshot (download required; see `DATA_SOURCES.md`). It is provenance, not needed for the core analyses.
-- Random seeds are fixed (`random_state=42`) throughout for exact reproducibility.
+- Random seeds are fixed (`random_state=42`) throughout, so every run yields identical results.
 - Full data provenance and licences: see `DATA_SOURCES.md`.
