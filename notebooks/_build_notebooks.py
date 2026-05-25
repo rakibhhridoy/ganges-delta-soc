@@ -1,6 +1,6 @@
 """Build two notebooks from the reproducibility scripts:
 
-  01_reproducibility.ipynb — clean run-all for peer review / Zenodo
+  01_run_all.ipynb — clean run-all for peer review / Zenodo
   02_tutorial.ipynb        — same analyses with didactic narrative +
                               extensible exploration cells at the end
 
@@ -116,7 +116,7 @@ Image("{png_name}", width=720)""")
 
 n1 = nbf.v4.new_notebook()
 n1.cells = [
-    md("# 01 — Reproducibility notebook\n\n"
+    md("# 01 — Run-all notebook\n\n"
        "*Companion to:* **Geochemistry-informed prediction and layered transferability of "
        "soil organic carbon in the Ganges Delta** (Hasan et al.).\n\n"
        "This notebook regenerates every reported number and every figure in the manuscript "
@@ -194,8 +194,8 @@ n1.cells = [
        "`fig4_ml_dl.png`, `fig5_transfer.png`, `fig6_hypo3_spatial.png`) "
        "now sit in `../scripts/`. They are the exact numbers cited in the manuscript."),
 ]
-nbf.write(n1, HERE / "01_reproducibility.ipynb")
-print("wrote", HERE / "01_reproducibility.ipynb")
+nbf.write(n1, HERE / "01_run_all.ipynb")
+print("wrote", HERE / "01_run_all.ipynb")
 
 # ─────────────────────────────────────────────────── notebook 2: tutorial
 

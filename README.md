@@ -41,7 +41,7 @@ The cross-delta panel (`data/h4_delta_samples.csv`) is WoSIS 2023 (Batjes et al.
 
 ## Notebooks
 Two Jupyter notebooks in `notebooks/` reproduce the analysis with the **H1–H4 code shown inline** — the builder `_build_notebooks.py` embeds each analysis script's source verbatim (no hidden `import`), so the notebooks and `scripts/` cannot drift; figures are rendered by the `make_fig*.py` plotting scripts. Regenerate with `python3 notebooks/_build_notebooks.py`:
-- **`01_reproducibility.ipynb`** — clean run-all that regenerates every reported number and figure; intended for peer review and the Zenodo deposit. Shipped with outputs already executed.
+- **`01_run_all.ipynb`** — clean run-all that regenerates every reported number and figure; intended for peer review and the Zenodo deposit. Shipped with outputs already executed.
 - **`02_tutorial.ipynb`** — the same analyses with explanatory narrative and open exploration cells at the end.
 
 Both run top-to-bottom in ≈1 min; Fig 1 is skipped automatically if `data/gis/DEM.tif` is absent.
