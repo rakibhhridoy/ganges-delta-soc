@@ -1,8 +1,8 @@
 MIT License
 
-Copyright (c) 2026 Md Rakib Hasan and co-authors of
-"Geochemistry-informed prediction and layered transferability of soil organic
-carbon in the Ganges Delta"
+Copyright (c) 2026 Md Rakib Hasan and co-authors of "Geochemistry-informed
+prediction and layered transferability of soil organic carbon in the Ganges
+Delta"
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -21,13 +21,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-------------------------------------------------------------------------------
-
-The MIT licence above covers the analysis code in this repository.
-
-External data redistributed here carry their own permissive licences:
-  - WoSIS 2023 December snapshot (Batjes et al. 2024, ISRIC): CC BY 4.0
-  - BIS Nederland (Wageningen Environmental Research, 4TU.ResearchData): CC BY 4.0
-  - geoBoundaries Bangladesh ADM0 (gbOpen): CC BY 4.0
-Their full provenance is documented in DATA_SOURCES.md.
