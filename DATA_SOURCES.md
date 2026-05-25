@@ -1,7 +1,7 @@
 # Data sources and provenance
 
 All data underlying the manuscript *"Geochemistry-informed prediction and layered
-transferability of soil organic carbon in the Ganges Delta"* (Uddin et al.).
+transferability of soil organic carbon in the Ganges Delta"* (Hasan et al.).
 
 ## 1. Primary field data (this study)
 | File | Description | n |

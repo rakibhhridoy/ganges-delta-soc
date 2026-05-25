@@ -118,7 +118,7 @@ n1 = nbf.v4.new_notebook()
 n1.cells = [
     md("# 01 — Reproducibility notebook\n\n"
        "*Companion to:* **Geochemistry-informed prediction and layered transferability of "
-       "soil organic carbon in the Ganges Delta** (Uddin et al.).\n\n"
+       "soil organic carbon in the Ganges Delta** (Hasan et al.).\n\n"
        "This notebook regenerates every reported number and every figure in the manuscript "
        "from the cached inputs in `../data/` and the analysis scripts in `../scripts/`. "
        "It is intended for the Zenodo deposit and for peer review; the same code is also "
