@@ -8,9 +8,8 @@ the scripts here from the data in `data/`. No external drive or network is requi
 for the core analyses (the cross-delta input is cached in `data/h4_delta_samples.csv`).
 
 ## Deposit
-- **Code → GitHub** (this repository): `scripts/`, `notebooks/`, `provenance/`, `requirements.txt`, `README.md`, `DATA_SOURCES.md`, and the small CSVs in `data/`.
-- **Data → Zenodo** (archived with a DOI, cited in the paper): the full `data/` directory, including the large `data/gis/DEM.tif` (183 MB) which is omitted from GitHub.
-- A tagged GitHub release is archived to Zenodo to mint a code DOI.
+- **Code → GitHub** (this repository): <https://github.com/rakibhhridoy/ganges-delta-soc>. Contains `scripts/`, `notebooks/`, `provenance/`, `requirements.txt`, `README.md`, `DATA_SOURCES.md`, and the small CSVs in `data/`.
+- **Data → Zenodo** (DOI: <https://doi.org/10.5281/zenodo.20377122>): the full `data/` directory, including the large `data/gis/DEM.tif` (183 MB) which is omitted from GitHub. Download this archive and use its `data/` to replace the (partial) `data/` here when reproducing.
 
 ## Environment
 ```
