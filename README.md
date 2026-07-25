@@ -22,6 +22,7 @@ Run from `scripts/` (each writes its outputs there):
 ```
 cd scripts
 python3 h1_hypothesis_tests.py     # H1 Table 1: correlations, interactions, pH quadratic, salinity, diagnostics
+python3 zone_descriptives.py       # SI Table S2: per-zone descriptive statistics
 python3 grothc_model.py            # H2 process model -> grothc_results.csv, grothc_multidelta_ratios.csv
 python3 ml_spatial_cv.py           # H3 leak-free spatial CV -> ml_spatial_cv_results.csv
 python3 engineered_ablation.py     # H3 engineered-feature ablation
