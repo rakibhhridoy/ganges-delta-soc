@@ -9,3 +9,7 @@ seaborn==0.13.2
 geopandas==1.1.2      # Fig 1 only (study-area map)
 rasterio==1.4.4       # Fig 1 only (DEM raster)
 pyarrow              # only for the optional WoSIS extraction provenance script
+
+# optional, only for dl_reconstruction.py (independent DL reconstruction)
+torch>=2.5
+torch_geometric>=2.6

@@ -83,10 +83,10 @@ def add(model, scheme, r2, rmse, ngroups=""):
                  "RMSE": round(rmse, 1), "n_folds_or_groups": ngroups})
 
 # GBR across all four schemes
-r, e = pooled_cv(gbr, X_full, y, random5);                       add("GBR (79 feat)", "random 5-fold (leaky)", r, e, 5)
-r, e = pooled_cv(gbr, X_full, y, group5, loc_groups);           add("GBR (79 feat)", "location-grouped 5-fold", r, e, 5)
-r, e = pooled_cv(gbr, X_full, y, logo, loc_groups);             add("GBR (79 feat)", "Leave-Location-Out (LOLO)", r, e, 20)
-r, e = pooled_cv(gbr, X_full, y, logo, zone_groups);            add("GBR (79 feat)", "Leave-Zone-Out (LZO)", r, e, 4)
+r, e = pooled_cv(gbr, X_full, y, random5);                       add("GBR (14 feat)", "random 5-fold (leaky)", r, e, 5)
+r, e = pooled_cv(gbr, X_full, y, group5, loc_groups);           add("GBR (14 feat)", "location-grouped 5-fold", r, e, 5)
+r, e = pooled_cv(gbr, X_full, y, logo, loc_groups);             add("GBR (14 feat)", "Leave-Location-Out (LOLO)", r, e, 20)
+r, e = pooled_cv(gbr, X_full, y, logo, zone_groups);            add("GBR (14 feat)", "Leave-Zone-Out (LZO)", r, e, 4)
 
 # baselines under random vs grouped
 r, e = pooled_cv(ols, X_ec, y, random5);                        add("EC-only OLS", "random 5-fold (leaky)", r, e, 5)

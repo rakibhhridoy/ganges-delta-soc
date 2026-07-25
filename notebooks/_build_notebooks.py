@@ -143,7 +143,7 @@ n1.cells = [
        "Because the 100 samples are five depths nested within 20 locations, random "
        "k-fold CV leaks spatial information across train/test. Location-grouped CV is "
        "the authoritative metric: gradient-boosting performance drops from R² ≈ 0.91 "
-       "(random) to R² ≈ 0.69 (location-grouped). OM is excluded (r = 0.996 with SOC). "
+       "(random) to R² ≈ 0.64 (location-grouped). OM is excluded (r = 0.996 with SOC). "
        "Reproduces R1.13 / R1.25 / R3.13 fixes."),
     code(ML_CV_RUN),
 
@@ -260,7 +260,7 @@ n2.cells = [
        "with SOC because they measure essentially the same thing. Including OM made the "
        "model look good (R² ≈ 0.98) for the wrong reason."),
     code(ML_CV_RUN),
-    md("The drop from R² ≈ 0.91 (random) → 0.69 (location-grouped) quantifies the "
+    md("The drop from R² ≈ 0.91 (random) → 0.64 (location-grouped) quantifies the "
        "pseudoreplication inflation. The Leave-Zone-Out failure (R² < 0) tells you the "
        "model has no out-of-zone skill — which is consistent with the cross-delta "
        "transfer failure we'll see in section 6."),

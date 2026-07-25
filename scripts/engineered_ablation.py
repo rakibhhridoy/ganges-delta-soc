@@ -65,7 +65,7 @@ eng["log_TN"]  = np.log1p(d["TN"])
 eng["log_Clay"]= np.log1p(d["Clay"])
 print(f"reconstructed {eng.shape[1]} engineered features")
 
-# full (78) feature matrix from preprocessed (minus OM), for the full-model test
+# full (14) feature matrix from preprocessed (minus OM; embeddings removed), for the full-model test
 feat = pd.read_csv(DATA / "features_preprocessed.csv")
 full = feat.drop(columns=[c for c in feat.columns if c.strip().upper() == "OM"]).reset_index(drop=True)
 
@@ -95,7 +95,7 @@ for name, mk in [("GBR", gbr), ("MLP", mlp)]:
     fe  = pooled(mk, full_eng_X)
     rows.append({"model": name, "soil9": round(b,3), "soil9+eng": round(be,3),
                  "dR2_eng_on_soil": round(be-b,3),
-                 "full78": round(f,3), "full78+eng": round(fe,3),
+                 "full14": round(f,3), "full14+eng": round(fe,3),
                  "dR2_eng_on_full": round(fe-f,3)})
 
 res = pd.DataFrame(rows)

@@ -84,7 +84,7 @@ for z in order:
     lzo[z] = r2_score(y[te], m.predict(X[te]))
 
 # pooled Leave-Location-Out R^2 (reported)
-LOLO = 0.834
+LOLO = 0.867
 
 labels = [z.replace(" ", "\n") for z in order] + ["LOLO\n(pooled)"]
 vals = [lzo[z] for z in order] + [LOLO]
