@@ -1,0 +1,43 @@
+{
+  "delineation": "0.5deg-buffered active-delta polygons (Nienhuis et al. 2020); Senegal = buffered bounding box (not in 100-delta set)",
+  "n_total_external": 1449,
+  "sample_counts": {
+    "Amazon": 34,
+    "Chao Phraya": 117,
+    "Danube": 18,
+    "Indus": 17,
+    "Limpopo": 192,
+    "Mackenzie": 26,
+    "Mississippi": 130,
+    "Niger": 29,
+    "Parana-Plata": 18,
+    "Pearl": 20,
+    "Rhine-Meuse": 595,
+    "Sacramento": 222,
+    "Senegal": 22,
+    "Yellow River": 9,
+    "Ganges": 100
+  },
+  "within_delta_median_R2": 0.05,
+  "cross_delta_median_R2": -0.657,
+  "cross_delta_frac_positive": 0.052,
+  "cross_delta_n_pairs": 210,
+  "reverse_pooled_to_ganges_R2": -0.743,
+  "lodo_negative_of_14": 13,
+  "lodo": {
+    "Amazon": -59.803,
+    "Chao Phraya": -84.436,
+    "Danube": -0.005,
+    "Indus": -10.748,
+    "Limpopo": -0.059,
+    "Mackenzie": -0.41,
+    "Mississippi": 0.021,
+    "Niger": -1.289,
+    "Parana-Plata": -2.308,
+    "Pearl": -31.317,
+    "Rhine-Meuse": -0.551,
+    "Sacramento": -0.261,
+    "Senegal": -105.748,
+    "Yellow River": -1206.988
+  }
+}
