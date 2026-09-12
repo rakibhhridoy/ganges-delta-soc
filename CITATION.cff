@@ -1,0 +1,63 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the manuscript below and the Zenodo data deposit."
+type: software
+title: "Ganges Delta SOC: code and data"
+abstract: "Code and data reproducing every reported number, table and figure of the Ganges Delta soil organic carbon manuscript (Hasan et al.), including geochemical predictability tests, leak-free spatial cross-validation, the process model, and cross-delta transferability analyses."
+authors:
+  - family-names: Hasan
+    given-names: Md Rakib
+    orcid: "https://orcid.org/0009-0002-4007-7590"
+    affiliation: "Department of Soil, Water and Environment, University of Dhaka; Fermium Systems, Dhaka"
+  - family-names: Arabi
+    given-names: Fazla Zawadul
+    orcid: "https://orcid.org/0009-0001-4632-9579"
+    affiliation: "Department of Soil, Water and Environment, University of Dhaka"
+  - family-names: Rupa
+    given-names: Mst Anika Khatun
+    orcid: "https://orcid.org/0009-0008-4347-4288"
+    affiliation: "Department of Soil, Water and Environment, University of Dhaka"
+  - family-names: Zubyer
+    given-names: Shoumik
+    orcid: "https://orcid.org/0009-0006-4085-1493"
+    affiliation: "Department of Soil, Water and Environment, University of Dhaka"
+  - family-names: Rabbi
+    given-names: Mohammad Fazle Alam
+    affiliation: "Department of Soil, Water and Environment, University of Dhaka"
+  - family-names: Uddin
+    given-names: Md Jashim
+    affiliation: "Department of Soil, Water and Environment, University of Dhaka"
+repository-code: "https://github.com/rakibhhridoy/ganges-delta-soc"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21564960"
+    description: "Zenodo deposit of the full data directory"
+license: MIT
+keywords:
+  - soil organic carbon
+  - Ganges Delta
+  - spatial cross-validation
+  - model transferability
+  - digital soil mapping
+preferred-citation:
+  type: article
+  title: "Geochemical predictability quantification and spatial transferability of soil organic carbon in Ganges Delta"
+  journal: "SOIL"
+  status: submitted
+  year: 2026
+  authors:
+    - family-names: Hasan
+      given-names: Md Rakib
+      orcid: "https://orcid.org/0009-0002-4007-7590"
+    - family-names: Arabi
+      given-names: Fazla Zawadul
+      orcid: "https://orcid.org/0009-0001-4632-9579"
+    - family-names: Rupa
+      given-names: Mst Anika Khatun
+      orcid: "https://orcid.org/0009-0008-4347-4288"
+    - family-names: Zubyer
+      given-names: Shoumik
+      orcid: "https://orcid.org/0009-0006-4085-1493"
+    - family-names: Rabbi
+      given-names: Mohammad Fazle Alam
+    - family-names: Uddin
+      given-names: Md Jashim
