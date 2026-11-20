@@ -1,0 +1,16 @@
+== Point 2 ==
+stock = SOCC x BD x 20: max abs diff 0.0004
+layer stock mean 45.1, range 1.1-275.5 t C/ha (per 20 cm)
+layers per location: [5]
+0-100 cm mean 225.4; by zone: {'Active': 142.3, 'Mature': 42.1, 'Moribund': 80.8, 'Tidal': 636.5}
+0-100 cm range 21.8 - 710.0
+layer stock by depth: {20: 32.3, 40: 31.1, 60: 36.5, 80: 58.2, 100: 67.3}
+EC>0.5 vs <=0.5 layer ratio 6.50 (n 33 layers, 7 locations)
+  location-bootstrap 95% CI 3.7-10.0
+
+== Point 4 (stock target; location-grouped 5-fold as published, plus 100 random location partitions) ==
+  all 14                 GroupKFold 0.64  LOLO 0.87  random-partition mean 0.73
+  without BD             GroupKFold 0.56  LOLO 0.79  random-partition mean 0.68
+  without BD and TN      GroupKFold 0.44  LOLO 0.57  random-partition mean 0.48
+  coords + terrain only  GroupKFold 0.39  LOLO 0.39  random-partition mean 0.35
+  top decile observed mean 214.8, predicted 163.9 (GroupKFold)

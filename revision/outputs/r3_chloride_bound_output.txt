@@ -1,0 +1,10 @@
+Worst-case bias as % of SOCC, by zone:
+          mean   max
+Zone                
+Active     1.0   3.6
+Mature     1.6   2.9
+Moribund   0.7   2.1
+Tidal      3.9  15.5
+Negative corrected SOCC: 0
+EC vs SOCC      r = 0.660
+EC vs SOCC_corr r = 0.648

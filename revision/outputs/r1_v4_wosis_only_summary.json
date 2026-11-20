@@ -1,0 +1,28 @@
+{
+  "panel": "v4_wosis_only",
+  "exact_duplicate_rows_dropped": 0,
+  "rows_external": 2798,
+  "sites_external": 656,
+  "published_method": {
+    "within_median_R2": 0.042705650725378685,
+    "cross_median_R2": -0.5234962407201539,
+    "cross_frac_positive": 0.08095238095238096,
+    "n_pairs": 210
+  },
+  "same_target": {
+    "within_local_median_R2": -0.02451892108307242,
+    "n_deltas_local_R2_pos": 6,
+    "n_deltas_local_beats_baseline_MAE": 10,
+    "n_deltas": 15,
+    "baseline_median_R2": -0.03445879376033627,
+    "cross_median_R2": -0.5234962407201539,
+    "cross_frac_positive": 0.08095238095238096,
+    "median_dR2_transfer_minus_local": -0.4496934565351096,
+    "median_MAE_ratio_transfer_over_local": 1.375205930897111,
+    "frac_pairs_transfer_beats_local_MAE": 0.23809523809523808,
+    "frac_pairs_transfer_beats_baseline_MAE": 0.3238095238095238,
+    "median_abs_bias_transfer": 8.208703754798705,
+    "lodo_R2_negative": 13,
+    "median_MAE_ratio_pooled_over_local": 1.354995020892491
+  }
+}

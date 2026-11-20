@@ -1,0 +1,28 @@
+{
+  "panel": "polygon",
+  "exact_duplicate_rows_dropped": 0,
+  "rows_external": 1263,
+  "sites_external": 741,
+  "published_method": {
+    "within_median_R2": 0.042705650725378685,
+    "cross_median_R2": -0.7272540113356777,
+    "cross_frac_positive": 0.05238095238095238,
+    "n_pairs": 210
+  },
+  "same_target": {
+    "within_local_median_R2": -0.07401360874173912,
+    "n_deltas_local_R2_pos": 5,
+    "n_deltas_local_beats_baseline_MAE": 11,
+    "n_deltas": 15,
+    "baseline_median_R2": -0.07148969422980586,
+    "cross_median_R2": -0.7272540113356777,
+    "cross_frac_positive": 0.05238095238095238,
+    "median_dR2_transfer_minus_local": -0.7619710781819178,
+    "median_MAE_ratio_transfer_over_local": 1.4753432401536601,
+    "frac_pairs_transfer_beats_local_MAE": 0.24285714285714285,
+    "frac_pairs_transfer_beats_baseline_MAE": 0.3904761904761905,
+    "median_abs_bias_transfer": 14.072822971916858,
+    "lodo_R2_negative": 14,
+    "median_MAE_ratio_pooled_over_local": 2.068928938014421
+  }
+}

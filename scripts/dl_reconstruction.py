@@ -17,8 +17,9 @@ depths; 4 heads, 3 layers), mixture-of-experts (4 experts, top-2 gating), tabula
 ViT (soil/spatial/embedding modality tokens + CLS, 3-layer MHSA), and a
 weight-constrained ensemble of these with gradient boosting. Dual-task objective
 (Huber + 0.3*CE), AdamW (1e-3, 1e-4), 200 epochs, early-stopping patience 30,
-seed 42. Reported under random 5-fold OOF (optimistic) and leak-free
-location-grouped 5-fold (authoritative).
+seed 42. Reported under random 5-fold OOF (optimistic), location-grouped 5-fold, and
+20 random location partitions (authoritative). v4 change: ensemble weights are
+cross-fitted (no test labels), and the verdict is computed rather than printed.
 
 Run:  python3 dl_reconstruction.py     (requires torch + torch_geometric)
 """
@@ -166,25 +167,51 @@ def gnn_oof(splits, inductive):
     for tr, te in splits: oof[te] = gnn_preds(tr, te, inductive)
     return oof
 
-def ens(oofs):
-    P = np.column_stack([oofs[k] for k in ["GBR", "GNN", "MoE", "ViT"]])
-    f = lambda w: -r2_score(y, P @ w)
-    r = minimize(f, [.25] * 4, method="SLSQP", bounds=[(0, 1)] * 4, constraints={"type": "eq", "fun": lambda w: w.sum() - 1})
-    return r2_score(y, P @ r.x), r.x
+def _weights(P, yy):
+    f = lambda w: -r2_score(yy, P @ w)
+    return minimize(f, [.25] * 4, method="SLSQP", bounds=[(0, 1)] * 4,
+                    constraints={"type": "eq", "fun": lambda w: w.sum() - 1}).x
 
-def run(splits, inductive, tag):
-    print(f"\n=== {tag} ===")
+def ens(oofs, splits):
+    """Weight-constrained ensemble with CROSS-FITTED weights: the weights applied to fold k are
+    fitted on the out-of-fold predictions of the other folds only, so no test label is used.
+    (v3 fitted the weights on all out-of-fold predictions, which used the test labels.)"""
+    P = np.column_stack([oofs[k] for k in ["GBR", "GNN", "MoE", "ViT"]])
+    out = np.full(N, np.nan)
+    for tr, te in splits:
+        out[te] = P[te] @ _weights(P[tr], y[tr])
+    return r2_score(y, out), _weights(P, y)
+
+def partition(seed, k=5):
+    L = np.unique(loc); r = np.random.RandomState(seed); r.shuffle(L)
+    return [(np.where(~np.isin(loc, f))[0], np.where(np.isin(loc, f))[0]) for f in np.array_split(L, k)]
+
+def run(splits, inductive, tag, verbose=True):
     o = {"GBR": gbr_oof(splits), "GNN": gnn_oof(splits, inductive),
          "MoE": tab_oof(lambda: MoE(Fdim), splits), "ViT": tab_oof(lambda: TabViT(), splits)}
-    for k in ["GBR", "GNN", "MoE", "ViT"]:
-        print(f"  {k:4s} R^2 = {r2_score(y, o[k]):+.3f}")
-    er, w = ens(o)
-    print(f"  ensemble (optimised weights) R^2 = {er:+.3f}  w(GBR/GNN/MoE/ViT)={np.round(w, 2)}")
-    print(f"  -> gradient boosting is not surpassed by any deep model or the ensemble.")
+    r = {k: r2_score(y, o[k]) for k in o}
+    r["Ensemble"], w = ens(o, splits)
+    if verbose:
+        print(f"\n=== {tag} ===")
+        for k in r: print(f"  {k:8s} R^2 = {r[k]:+.3f}")
+        print(f"  full-data weights (descriptive only) GBR/GNN/MoE/ViT = {np.round(w, 2)}")
+        best = max((k for k in r if k != "GBR"), key=r.get)
+        verdict = "is not surpassed" if r[best] <= r["GBR"] else f"IS SURPASSED by {best}"
+        print(f"  -> on this split gradient boosting {verdict} (best other: {best} {r[best]:+.3f}).")
+    return r
 
 random5 = list(KFold(5, shuffle=True, random_state=SEED).split(np.arange(N)))
 grouped = list(GroupKFold(5).split(np.arange(N), y, loc))
-run(random5, False, "[A] random 5-fold OOF (optimistic)")
-run(grouped, True, "[B] leak-free location-grouped 5-fold (authoritative)")
-print("\nIndependent reconstruction from the Methods; high-variance at n=100; "
-      "the reproducible result is the ranking, not the absolute values.")
+run(random5, False, "[A] random 5-fold OOF (optimistic, leaky)")
+run(grouped, True, "[B] location-grouped 5-fold (GroupKFold)")
+
+# [C] A single location split is high-variance at 20 locations; repeat over random location partitions.
+REPS = 20
+print(f"\n=== [C] {REPS} random location partitions (5-fold), inductive GNN ===")
+keys = ["GBR", "GNN", "MoE", "ViT", "Ensemble"]
+A = np.array([[run(partition(s), True, "", verbose=False)[k] for k in keys] for s in range(REPS)])
+for i, k in enumerate(keys):
+    line = f"  {k:8s} median {np.median(A[:, i]):+.3f}  range {A[:, i].min():+.3f} to {A[:, i].max():+.3f}"
+    if k != "GBR": line += f"  beats GBR in {(A[:, i] > A[:, 0]).sum()}/{REPS}"
+    print(line)
+print("\nIndependent reconstruction from the Methods; high-variance at n=100.")

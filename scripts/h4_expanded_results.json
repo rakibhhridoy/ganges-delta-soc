@@ -1,26 +1,26 @@
 {
   "distance_decay": {
     "geo_km": {
-      "spearman_rho": 0.032,
-      "p": 0.647
+      "spearman_rho": 0.029,
+      "p": 0.681
     },
     "feat_dist": {
-      "spearman_rho": 0.009,
-      "p": 0.9
+      "spearman_rho": 0.031,
+      "p": 0.65
     },
     "abs_dlat": {
-      "spearman_rho": -0.114,
-      "p": 0.1
+      "spearman_rho": -0.121,
+      "p": 0.0794
     }
   },
   "feature_universality": {
     "ganges_top_feature": "ph",
-    "mean_kendall_tau": 0.381,
-    "frac_sharing_ganges_top": 0.429,
-    "n_deltas": 14
+    "mean_kendall_tau": 0.359,
+    "frac_sharing_ganges_top": 0.308,
+    "n_deltas": 13
   },
   "fewshot_recovery": {
-    "n_deltas": 15,
+    "n_deltas": 12,
     "reach_50pct_ceiling_by_n20": 0,
     "positive_R2_by_n20": 2
   }

@@ -1,0 +1,2 @@
+point estimate 0.643
+location bootstrap 95 % CI -0.09 to 0.85; median 0.64

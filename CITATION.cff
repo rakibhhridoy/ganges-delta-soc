@@ -2,7 +2,9 @@ cff-version: 1.2.0
 message: "If you use this code or data, please cite the manuscript below and the Zenodo data deposit."
 type: software
 title: "Ganges Delta SOC: code and data"
-abstract: "Code and data reproducing every reported number, table and figure of the Ganges Delta soil organic carbon manuscript (Hasan et al.), including geochemical predictability tests, leak-free spatial cross-validation, the process model, and cross-delta transferability analyses."
+version: "4"
+date-released: "2026-11-20"
+abstract: "Code and data reproducing every reported number, table and figure of the Ganges Delta soil organic carbon manuscript (Hasan et al.), including geochemical predictability tests, leak-free spatial cross-validation, and cross-delta transferability analyses."
 authors:
   - family-names: Hasan
     given-names: Md Rakib
@@ -29,8 +31,8 @@ authors:
 repository-code: "https://github.com/rakibhhridoy/ganges-delta-soc"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.21564960"
-    description: "Zenodo deposit of the full data directory"
+    value: "10.5281/zenodo.24398898"
+    description: "Zenodo deposit, version 4 (code and data)"
 license: MIT
 keywords:
   - soil organic carbon

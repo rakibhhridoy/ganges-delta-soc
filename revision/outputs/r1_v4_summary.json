@@ -1,0 +1,28 @@
+{
+  "panel": "v4",
+  "exact_duplicate_rows_dropped": 0,
+  "rows_external": 4789,
+  "sites_external": 2647,
+  "published_method": {
+    "within_median_R2": 0.042705650725378685,
+    "cross_median_R2": -0.5261155095169489,
+    "cross_frac_positive": 0.0761904761904762,
+    "n_pairs": 210
+  },
+  "same_target": {
+    "within_local_median_R2": -0.014158544317936627,
+    "n_deltas_local_R2_pos": 7,
+    "n_deltas_local_beats_baseline_MAE": 10,
+    "n_deltas": 15,
+    "baseline_median_R2": -0.03445879376033627,
+    "cross_median_R2": -0.5261155095169489,
+    "cross_frac_positive": 0.0761904761904762,
+    "median_dR2_transfer_minus_local": -0.5279844321369362,
+    "median_MAE_ratio_transfer_over_local": 1.3769526511177395,
+    "frac_pairs_transfer_beats_local_MAE": 0.2,
+    "frac_pairs_transfer_beats_baseline_MAE": 0.3,
+    "median_abs_bias_transfer": 9.103444113851591,
+    "lodo_R2_negative": 12,
+    "median_MAE_ratio_pooled_over_local": 1.9205474833258929
+  }
+}

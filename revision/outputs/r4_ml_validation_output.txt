@@ -1,0 +1,22 @@
+== (1) LOLO vs location-grouped 5-fold ==
+reproduced: GroupKFold(5) pooled R2 0.643   LOLO pooled R2 0.867
+published GroupKFold folds, by zone (locations per fold):
+  fold 0: {'Moribund': 1, 'Tidal': 1, 'Active': 1, 'Mature': 1}   fold R2 +0.94
+  fold 1: {'Tidal': 2, 'Active': 1, 'Mature': 1}   fold R2 +0.79
+  fold 2: {'Active': 1, 'Tidal': 1, 'Mature': 1, 'Moribund': 1}   fold R2 -0.02
+  fold 3: {'Active': 1, 'Mature': 1, 'Tidal': 1, 'Moribund': 1}   fold R2 +0.90
+  fold 4: {'Moribund': 2, 'Active': 1, 'Mature': 1}   fold R2 +0.07
+Tidal-row error: GroupKFold MAE 35.6, LOLO MAE 20.5 t C/ha; non-Tidal 16.5 vs 12.6
+random location partitions, pooled R2 by number of folds (100 partitions each; k=20 is LOLO):
+  k= 4: mean 0.694  median 0.746  5-95% [0.40, 0.88]  published-0.64-or-lower in 35 %
+  k= 5: mean 0.728  median 0.764  5-95% [0.47, 0.89]  published-0.64-or-lower in 27 %
+  k=10: mean 0.827  median 0.854  5-95% [0.69, 0.88]  published-0.64-or-lower in 1 %
+  zone-stratified 5-fold (one location per zone per fold): mean 0.794  5-95% [0.50, 0.89]
+
+== (2) engineered features, selection inside folds (zone-stratified 5-fold, 100 partitions) ==
+  base 14                            mean R2 0.794  5-95% [0.50, 0.89]   vs base: mean +0.000, better in 0 %
+  base 14 + 23 eng (no selection)    mean R2 0.851  5-95% [0.82, 0.87]   vs base: mean +0.057, better in 65 %
+  37, top-14 selected in fold        mean R2 0.587  5-95% [0.33, 0.70]   vs base: mean -0.207, better in 5 %
+  37, top-7 selected in fold         mean R2 0.538  5-95% [0.31, 0.66]   vs base: mean -0.256, better in 3 %
+  14, top-7 selected in fold         mean R2 0.419  5-95% [-0.01, 0.59]   vs base: mean -0.375, better in 0 %
+  baseline zone mean: mean R2 0.583   EC-only OLS: 0.399

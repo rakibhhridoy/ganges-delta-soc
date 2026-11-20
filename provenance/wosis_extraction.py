@@ -20,7 +20,7 @@ from pathlib import Path
 import pandas as pd
 
 WOSIS_DIR = Path("WoSIS_2023_December")  # point at the unzipped snapshot
-OUT = Path(__file__).resolve().parent.parent / "data" / "h4_delta_samples.csv"
+OUT = Path(__file__).resolve().parent.parent / "data" / "wosis_layers_0_100cm.csv"  # v4; then run assemble_panel.py
 
 # 14 deltas with adequate co-measured predictor coverage (lat0, lat1, lon0, lon1).
 DELTAS = {
@@ -49,6 +49,7 @@ def main():
                          usecols=["profile_id", "layer_id", "site_id", "upper_depth", "lower_depth"]).merge(
         sites, on="site_id", how="left")
     layers["upper_depth"] = pd.to_numeric(layers["upper_depth"], errors="coerce")
+    layers["lower_depth"] = pd.to_numeric(layers["lower_depth"], errors="coerce")
 
     attrs = {"soc": load_attr("orgc", "soc"), "ph": load_attr("phaq", "ph"),
              "clay": load_attr("clay", "clay"), "silt": load_attr("silt", "silt"),
@@ -56,7 +57,9 @@ def main():
     base = layers[["profile_id", "layer_id", "latitude", "longitude", "upper_depth", "lower_depth"]].copy()
     for k, t in attrs.items():
         base = base.merge(t, on=["profile_id", "layer_id"], how="left")
-    base = base[base["upper_depth"] < 100]
+    # v4: keep only layers lying wholly within 0-100 cm (v3 kept layers starting above 100 cm, 532 of
+    # which extended to as deep as 250 cm).
+    base = base[base["lower_depth"] <= 100]
 
     rows = []
     for nm, (a0, a1, o0, o1) in DELTAS.items():
@@ -65,7 +68,7 @@ def main():
         sub["delta"] = nm
         rows.append(sub.rename(columns={"latitude": "lat", "longitude": "lon",
                                         "upper_depth": "depth_top_cm", "lower_depth": "depth_bot_cm"})
-                    [["delta", "lat", "lon", "depth_top_cm", "depth_bot_cm", "soc", "ph", "clay", "silt", "sand"]])
+                    [["delta", "lat", "lon", "depth_top_cm", "depth_bot_cm", "soc", "ph", "clay", "silt", "sand", "profile_id"]])
     out = pd.concat(rows, ignore_index=True)
     out.to_csv(OUT, index=False)
     print(f"wrote {OUT} : {len(out)} samples across {out.delta.nunique()} deltas")

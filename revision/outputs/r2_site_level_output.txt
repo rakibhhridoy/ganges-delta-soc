@@ -1,0 +1,26 @@
+rows 100 locations 20
+                 var  pooled_r  pooled_p  site_r  site_p  mixed_beta  mixed_p  mixedzone_beta  mixedzone_p  nonTidal_site_r  nonTidal_site_p
+test                                                                                                                                        
+H1.1            Clay    0.3231    0.0010  0.5355  0.0150      0.0754   0.5388         -0.0951       0.1970          -0.0981           0.7280
+H1.2        Moisture    0.5523    0.0000  0.7541  0.0001      0.3966   0.0001          0.1385       0.0671           0.2278           0.4141
+H1.3            pH^2       NaN    0.0314     NaN  0.4643         NaN   0.0045             NaN       0.0014              NaN              NaN
+H1.4              TN    0.0449    0.6573  0.1701  0.4735     -0.0352   0.6787         -0.0451       0.5470           0.4936           0.0615
+H1.5             CEC    0.6363    0.0000  0.8371  0.0000      0.6117   0.0000         -0.0873       0.7046           0.6324           0.0114
+H1.6              EC    0.6641    0.0000  0.8947  0.0000      0.6593   0.0000         -0.3158       0.0305           0.4489           0.0932
+H1.7              BD   -0.5110    0.0000 -0.6124  0.0041     -0.4213   0.0000         -0.2529       0.0005          -0.5887           0.0210
+H1.8   ClayxMoisture       NaN    0.0012     NaN  0.1645      0.2462   0.0029         -0.0025       0.9735              NaN              NaN
+H1.9          CECxpH       NaN    0.0000     NaN  0.0752      0.4418   0.0000          0.3595       0.0000              NaN              NaN
+H1.10    ECxMoisture       NaN    0.0210     NaN  0.0663      0.5126   0.0000          0.4221       0.1894              NaN              NaN
+
+Pass Bonferroni 0.05/10 = 0.005:
+  pooled_p     7 of 10: ['H1.1', 'H1.2', 'H1.5', 'H1.6', 'H1.7', 'H1.8', 'H1.9']
+  site_p       4 of 10: ['H1.2', 'H1.5', 'H1.6', 'H1.7']
+  mixed_p      8 of 10: ['H1.2', 'H1.3', 'H1.5', 'H1.6', 'H1.7', 'H1.8', 'H1.9', 'H1.10']
+  mixedzone_p  3 of 10: ['H1.3', 'H1.7', 'H1.9']
+Pass 0.002 (published threshold), pooled: 7 ['H1.1', 'H1.2', 'H1.5', 'H1.6', 'H1.7', 'H1.8', 'H1.9']
+
+EC slope on stock within each zone (mixed, random intercept per location; unstandardized, t C/ha per dS/m):
+  Tidal     slope    -10.8  95% CI [  -18.8,    -2.8]  p 0.008   site-mean r (n=5) -0.46 p 0.44
+  Active    slope     11.2  95% CI [  -28.3,    50.7]  p 0.579   site-mean r (n=5) +0.02 p 0.97
+  Mature    slope    131.0  95% CI [ -223.0,   485.1]  p 0.468   site-mean r (n=5) +0.81 p 0.10
+  Moribund  slope    142.0  95% CI [ -222.7,   506.7]  p 0.445   site-mean r (n=5) +0.33 p 0.59
